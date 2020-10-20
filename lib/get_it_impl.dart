@@ -325,10 +325,7 @@ class _GetItImplementation implements GetIt {
     } else {
       instance = instanceFactory.getObject(param1, param2);
     }
-
-    assert(instance is T,
-        'Object with name $instanceName has a different type (${instanceFactory.registrationType.toString()}) than the one that is inferred (${T.toString()}) where you call it');
-
+    
     return instance as T;
   }
 
